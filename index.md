@@ -6,7 +6,7 @@ title: Inicio
 # ¡Hola Mundo!
 Este es mi sitio con el tema Architect.
 
-<title>Proyecto publicado en pages con GIT y JEKYLL</title>
+Proyecto publicado en pages con GIT y JEKYLL
 
 {% comment %}
 
