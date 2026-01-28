@@ -6,11 +6,15 @@ title: Inicio
 # ¡Hola Mundo!
 Este es mi sitio con el tema Architect.
 
+<title>Proyecto publicado en pages con GIT y JEKYLL</title>
+
+{% comment %}
+
 # <!DOCTYPE html>
 # <html lang="es">
 # <head>
 #    <meta charset="UTF-8">
-#    <title>Proyecto publicado en pages con GIT</title>
+#    
 # </head>
 # <body>
 #    <h1>Archivo de HTML </h1>
@@ -18,3 +22,4 @@ Este es mi sitio con el tema Architect.
 #    <p></p>
 # </body>
 # </html>
+{% endcomment %}
