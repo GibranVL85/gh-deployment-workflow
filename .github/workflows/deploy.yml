@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Deploy Jekyll with Architect theme
 
 on:
   push:
@@ -22,11 +22,24 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+# --- NUEVOS PASOS PARA JEKYLL ---
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true # Instala automáticamente lo que pusiste en el Gemfile
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+# --- AJUSTE EN EL ARTEFACTO ---
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Despliega el contenido del directorio raíz
-          path: '.'
+         # Importante: Jekyll genera el sitio en la carpeta _site
+          path: './_site'
+         # path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
